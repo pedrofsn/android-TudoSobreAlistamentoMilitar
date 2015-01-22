@@ -1,0 +1,8 @@
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\classes\debug
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-ec917ff56d545f7ef81bcbbe1fe91916f2a48e79.jar
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-fa71cf434b5f76edc221b9c0b32249ba360845a6.jar
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-4b4a093b999eee051b187cee35d7ed94f8fdc412.jar
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\gson-2.3.1-69f0b3c6f2166d2a2c4de1e8905ebbf696c4adad.jar
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-d2af3f47fb5b260ac9e8c50d80b9d2d9ce55e5ea.jar
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-8008b375cc321963c62dbc6f1659cfe9c4578bb7.jar
+F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-61a46306d23a3af350aa3d5b84001670484adad8.jar

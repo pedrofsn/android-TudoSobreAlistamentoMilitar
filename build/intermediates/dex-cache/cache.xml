@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-4b4a093b999eee051b187cee35d7ed94f8fdc412.jar" />
+    </item>
+    <item
+        jar="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-61a46306d23a3af350aa3d5b84001670484adad8.jar" />
+    </item>
+    <item
+        jar="C:\Users\pedrofsn\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\gson-2.3.1-69f0b3c6f2166d2a2c4de1e8905ebbf696c4adad.jar" />
+    </item>
+    <item
+        jar="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-8008b375cc321963c62dbc6f1659cfe9c4578bb7.jar" />
+    </item>
+    <item
+        jar="F:\Desenvolvimento\android-sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-ec917ff56d545f7ef81bcbbe1fe91916f2a48e79.jar" />
+    </item>
+    <item
+        jar="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-fa71cf434b5f76edc221b9c0b32249ba360845a6.jar" />
+    </item>
+    <item
+        jar="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4796f18d3750bf2bfa078407a94a7f9db35b440d">
+        <dex dex="F:\git\TudoSobreoAlistamentoMilitar\app\build\intermediates\pre-dexed\debug\classes-d2af3f47fb5b260ac9e8c50d80b9d2d9ce55e5ea.jar" />
+    </item>
+
+</items>
