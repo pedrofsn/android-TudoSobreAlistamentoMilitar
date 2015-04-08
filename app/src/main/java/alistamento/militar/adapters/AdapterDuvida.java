@@ -52,6 +52,7 @@ public class AdapterDuvida extends RecyclerView.Adapter<AdapterDuvida.ViewHolder
                         .setTitle(duvida.getPergunta())
                         .setMessage(Html.fromHtml(duvida.getResposta()))
                         .setNegativeButtonText(context.getString(R.string.fechar))
+                        .setCancelableOnTouchOutside(false)
                         .show();
             }
         });
