@@ -1,4 +1,4 @@
-package alistamento.militar;
+package alistamento.militar.tasks;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -10,11 +10,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import alistamento.militar.models.Duvida;
+import alistamento.militar.domain.Searchable;
+
 
 /**
  * Created by pedro.sousa on 24/12/2014.
  */
-public class AsyncTaskLoad extends AsyncTask<String, Void, Object[]> {
+public class AsyncTaskLoad extends AsyncTask<String, Void, Duvida[]> {
 
     private final Context context;
     private final Searchable callback;
@@ -31,12 +34,12 @@ public class AsyncTaskLoad extends AsyncTask<String, Void, Object[]> {
     }
 
     @Override
-    protected Object[] doInBackground(String... params) {
+    protected Duvida[] doInBackground(String... params) {
         return new Gson().fromJson(getStringJsonFromAssets("duvidas.json"), Duvida[].class);
     }
 
     @Override
-    protected void onPostExecute(Object[] result) {
+    protected void onPostExecute(Duvida[] result) {
         super.onPostExecute(result);
         callback.onLoaded(result);
     }

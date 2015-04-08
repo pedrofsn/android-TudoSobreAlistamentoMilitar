@@ -1,16 +1,20 @@
-package alistamento.militar;
+package alistamento.militar.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.ProgressBar;
+
+import alistamento.militar.R;
+import alistamento.militar.adapters.AdapterDuvida;
+import alistamento.militar.domain.Searchable;
+import alistamento.militar.models.Duvida;
+import alistamento.militar.tasks.AsyncTaskLoad;
 
 /**
  * Created by pedrofsn on 11/01/2015.
@@ -46,12 +50,12 @@ public class FragmentPerguntas extends Fragment implements Searchable {
     }
 
     @Override
-    public void onLoaded(Object[] result) {
+    public void onLoaded(Duvida[] result) {
         recyclerView.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.GONE);
 
         if (result != null && result.length >= 1) {
-            recyclerView.setAdapter(new AdapterDuvida((Duvida[]) result));
+            recyclerView.setAdapter(new AdapterDuvida(getActivity() ,getFragmentManager(), result));
         }
     }
 }

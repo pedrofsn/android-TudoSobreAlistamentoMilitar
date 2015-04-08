@@ -1,4 +1,4 @@
-package alistamento.militar;
+package alistamento.militar.models;
 
 import java.io.Serializable;
 
