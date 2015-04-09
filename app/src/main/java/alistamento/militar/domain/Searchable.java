@@ -1,6 +1,6 @@
 package alistamento.militar.domain;
 
-import alistamento.militar.models.Duvida;
+import alistamento.militar.model.Duvida;
 
 /**
  * Created by pedrofsn on 10/01/2015.

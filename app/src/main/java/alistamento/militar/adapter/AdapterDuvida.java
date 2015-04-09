@@ -1,31 +1,28 @@
-package alistamento.militar.adapters;
+package alistamento.militar.adapter;
 
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.avast.android.dialogs.fragment.SimpleDialogFragment;
-
 import alistamento.militar.R;
-import alistamento.militar.models.Duvida;
+import alistamento.militar.dialog.SimpleDialog;
+import alistamento.militar.model.Duvida;
 
 /**
  * Created by pedrofsn on 11/01/2015.
  */
 public class AdapterDuvida extends RecyclerView.Adapter<AdapterDuvida.ViewHolder> {
 
-    private FragmentManager fragmentManager;
+    public static Duvida duvidaSelecionada;
     private Duvida[] listDuvidas;
     private Context context;
 
-    public AdapterDuvida(Context context, FragmentManager fragmentManager, Duvida[] result) {
+    public AdapterDuvida(Context context, Duvida[] result) {
         this.context = context;
-        this.fragmentManager = fragmentManager;
         this.listDuvidas = result;
     }
 
@@ -42,18 +39,13 @@ public class AdapterDuvida extends RecyclerView.Adapter<AdapterDuvida.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final Duvida duvida = listDuvidas[position];
+        duvidaSelecionada = listDuvidas[position];
 
-        holder.textView.setText(duvida.getPergunta());
+        holder.textView.setText(duvidaSelecionada.getPergunta());
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleDialogFragment.createBuilder(context, fragmentManager)
-                        .setTitle(duvida.getPergunta())
-                        .setMessage(Html.fromHtml(duvida.getResposta()))
-                        .setNegativeButtonText(context.getString(R.string.fechar))
-                        .setCancelableOnTouchOutside(false)
-                        .show();
+                SimpleDialog.show(((FragmentActivity) context));
             }
         });
     }
@@ -62,7 +54,6 @@ public class AdapterDuvida extends RecyclerView.Adapter<AdapterDuvida.ViewHolder
     public int getItemCount() {
         return listDuvidas.length;
     }
-
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 

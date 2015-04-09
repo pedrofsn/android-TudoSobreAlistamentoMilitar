@@ -2,9 +2,13 @@
 <resources>
 
     <string name="app_name">Tudo Sobre o Alistamento Militar</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+
+    <string name="duvidas">Dúvidas</string>
 
     <string name="fechar">Fechar</string>
+
+    <string name="compartilhar">Compartilhar</string>
+
+    <string name="ad_unit_id"></string>
 
 </resources>

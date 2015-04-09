@@ -1,4 +1,4 @@
-package alistamento.militar.tasks;
+package alistamento.militar.task;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -10,19 +10,19 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import alistamento.militar.models.Duvida;
 import alistamento.militar.domain.Searchable;
+import alistamento.militar.model.Duvida;
 
 
 /**
  * Created by pedro.sousa on 24/12/2014.
  */
-public class AsyncTaskLoad extends AsyncTask<String, Void, Duvida[]> {
+public class CarregarDuvidasJSONAsyncTask extends AsyncTask<String, Void, Duvida[]> {
 
     private final Context context;
     private final Searchable callback;
 
-    public AsyncTaskLoad(Context context, Searchable callback) {
+    public CarregarDuvidasJSONAsyncTask(Context context, Searchable callback) {
         this.context = context;
         this.callback = callback;
     }
