@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import alistamento.militar.domain.Searchable;
 import alistamento.militar.model.Duvida;
@@ -41,7 +42,7 @@ public class CarregarDuvidasJSONAsyncTask extends AsyncTask<String, Void, Duvida
     @Override
     protected void onPostExecute(Duvida[] result) {
         super.onPostExecute(result);
-        callback.onLoaded(result);
+        callback.onLoaded(Arrays.asList(result));
     }
 
     private String getStringJsonFromAssets(String arquivo) {

@@ -1,15 +1,15 @@
 package alistamento.militar.adapter;
 
-import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 import alistamento.militar.R;
-import alistamento.militar.dialog.SimpleDialog;
 import alistamento.militar.model.Duvida;
 
 /**
@@ -17,51 +17,43 @@ import alistamento.militar.model.Duvida;
  */
 public class AdapterDuvida extends RecyclerView.Adapter<AdapterDuvida.ViewHolder> {
 
-    public static Duvida duvidaSelecionada;
-    private Duvida[] listDuvidas;
-    private Context context;
+    private List<Duvida> listDuvidas;
 
-    public AdapterDuvida(Context context, Duvida[] result) {
-        this.context = context;
+    public AdapterDuvida(List<Duvida> result) {
         this.listDuvidas = result;
     }
 
     @Override
     public AdapterDuvida.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                        int viewType) {
-
-        ViewHolder holder = new ViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.adapter_duvida, parent, false));
-        holder.textView.setTag(holder);
-
-        return holder;
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.adapter_duvida, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        duvidaSelecionada = listDuvidas[position];
-
-        holder.textView.setText(duvidaSelecionada.getPergunta());
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SimpleDialog.show(((FragmentActivity) context));
-            }
-        });
+        holder.textView.setText(listDuvidas.get(position).getPergunta());
     }
 
     @Override
     public int getItemCount() {
-        return listDuvidas.length;
+        return listDuvidas.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView textView;
 
         public ViewHolder(View v) {
             super(v);
             textView = (TextView) v.findViewById(R.id.textView);
+            v.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(v.getContext(), listDuvidas.get(getAdapterPosition()).getPergunta(), Toast.LENGTH_SHORT).show();
         }
     }
 }
