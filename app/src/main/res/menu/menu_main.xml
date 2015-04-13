@@ -11,8 +11,14 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/duvidas"
+        android:id="@+id/enviarDuvida"
         android:orderInCategory="100"
-        android:title="@string/duvidas"
+        android:title="@string/enviar_duvida"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/avaliarAppNaGooglePlay"
+        android:orderInCategory="100"
+        android:title="@string/avaliar_app"
         app:showAsAction="never" />
 </menu>

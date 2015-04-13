@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="ad_unit_id"></string>
+
     <string name="app_name">Tudo Sobre o Alistamento Militar</string>
 
-    <string name="duvidas">Dúvidas</string>
+    <string name="enviar_duvida">Enviar dúvida</string>
 
     <string name="fechar">Fechar</string>
 
@@ -11,6 +13,6 @@
 
     <string name="pesquisar">Pesquisar</string>
 
-    <string name="ad_unit_id">0237fda04142460b</string>
+    <string name="avaliar_app">Avaliar App</string>
 
 </resources>

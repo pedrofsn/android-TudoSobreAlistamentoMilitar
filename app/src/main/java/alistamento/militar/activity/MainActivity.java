@@ -15,6 +15,7 @@ import com.google.android.gms.ads.InterstitialAd;
 
 import alistamento.militar.R;
 import alistamento.militar.fragment.FragmentPerguntas;
+import alistamento.militar.utils.GPlay;
 
 
 public class MainActivity extends ActionBarActivity implements
@@ -74,13 +75,15 @@ public class MainActivity extends ActionBarActivity implements
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.duvidas:
+            case R.id.enviarDuvida:
                 Intent itSend = new Intent(android.content.Intent.ACTION_SEND);
                 itSend.setType("plain/text");
                 itSend.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"faleconosco@ccomsex.eb.mil.br"});
-                itSend.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.duvidas) + " - " + getString(R.string.app_name));
+                itSend.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.enviar_duvida) + " - " + getString(R.string.app_name));
                 startActivity(itSend);
-
+                break;
+            case R.id.avaliarAppNaGooglePlay:
+                GPlay.avaliarAppNaGooglePlay(this);
                 break;
         }
 
