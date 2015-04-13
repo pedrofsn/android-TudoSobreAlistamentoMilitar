@@ -93,7 +93,7 @@ public class FragmentPerguntas extends Fragment implements Searchable, SearchVie
     }
 
     private void setContent(final List<Duvida> listDuvidasCarregadas) {
-        recyclerView.setAdapter(new AdapterDuvida(listDuvidasCarregadas));
+        recyclerView.setAdapter(new AdapterDuvida(getActivity(), listDuvidasCarregadas));
     }
 
     @Override
