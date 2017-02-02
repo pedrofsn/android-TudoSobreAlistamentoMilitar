@@ -21,5 +21,6 @@
             android:padding="10dp"
             android:textSize="22sp" />
     </android.support.v7.widget.CardView>
+
 </LinearLayout>
 

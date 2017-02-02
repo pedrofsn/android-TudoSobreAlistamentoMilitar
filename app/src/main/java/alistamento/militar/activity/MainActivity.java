@@ -48,6 +48,7 @@ public class MainActivity extends ActionBarActivity implements
 
         AdRequest adRequest = new AdRequest.Builder()
                 .setGender(AdRequest.GENDER_MALE)
+                .addTestDevice("emulador")
                 .build();
 
         interstitial.loadAd(adRequest);
@@ -60,10 +61,13 @@ public class MainActivity extends ActionBarActivity implements
         });
     }
 
-    private void showInterstitial() {
+    private boolean showInterstitial() {
         if (interstitial != null && interstitial.isLoaded()) {
             interstitial.show();
+            return true;
         }
+
+        return false;
     }
 
     @Override
@@ -92,8 +96,9 @@ public class MainActivity extends ActionBarActivity implements
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        showInterstitial();
+        if (!showInterstitial()) {
+            super.onBackPressed();
+        }
     }
 
     @Override
